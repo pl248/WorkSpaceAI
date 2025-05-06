@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiza Produktu</title>
+</head>
+<body>
+    <h1>Analiza Produktu</h1>
+    <textarea id="product-description" rows="4" cols="50" placeholder="Wpisz opis produktu tutaj"></textarea><br>
+    <button onclick="generateAnalysis()">Generuj Analizę</button>
+    <pre id="analysis-result"></pre>
+
+    <script src="analysis.js"></script>
+    <script>
+        function generateAnalysis() {
+            const productDescription = document.getElementById("product-description").value;
+            const result = analyzeProduct(productDescription);
+            document.getElementById("analysis-result").innerText = result;
+        }
+    </script>
+</body>
+</html>
